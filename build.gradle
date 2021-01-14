@@ -1,0 +1,31 @@
+plugins {
+    id 'application'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.21'
+}
+
+group = 'io.uuz.bns'
+version = '1.0-SNAPSHOT'
+
+application {
+    mainClassName = "io.uuz.bns.bot.MainKt"
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile 'com.microsoft.playwright:playwright:0.171.0'
+    compile 'net.mamoe:mirai-core-all:2.0-M2-2'
+    compile 'com.squareup.okhttp3:okhttp:4.9.0'
+    compile 'org.jsoup:jsoup:1.13.1'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = '11'
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = '11'
+}
